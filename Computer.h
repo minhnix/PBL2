@@ -10,10 +10,11 @@ protected:
   bool beingUsed;
   Location location;
   string timeUsed;
+  string idStudent;
 
 public:
   Computer(/* args */);
-  Computer(string, bool, Location, string);
+  Computer(string, bool, Location, string, string);
   ~Computer();
   bool operator==(const Computer &);
   friend ostream &operator<<(ostream &, const Computer &);
