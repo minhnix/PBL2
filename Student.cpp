@@ -4,8 +4,9 @@ using namespace std;
 
 Student::Student()
 {
-  this->name = "";
   this->id = "";
+  this->name = "";
+  this->isUsingComputer = "";
 }
 
 Student::~Student()

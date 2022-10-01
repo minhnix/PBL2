@@ -6,10 +6,9 @@ using namespace std;
 class Student
 {
 protected:
-  string name;
   string id;
-  bool isUsingComputer;
-  string idComputer;
+  string name;
+  string isUsingComputer;
 
 public:
   Student(/* args */);
