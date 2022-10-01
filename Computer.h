@@ -13,7 +13,7 @@ protected:
 
 public:
   Computer(/* args */);
-  Computer(string, string, string);
+  Computer(string, string, string, string);
   ~Computer();
   bool operator==(const Computer &);
   friend ostream &operator<<(ostream &, const Computer &);

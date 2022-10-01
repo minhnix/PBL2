@@ -12,5 +12,8 @@ protected:
 
 public:
   Student(/* args */);
+  Student(string, string, string);
   ~Student();
+  bool operator==(const Student &);
+  friend ostream &operator<<(ostream &, const Student &);
 };

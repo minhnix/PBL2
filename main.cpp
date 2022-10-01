@@ -1,19 +1,23 @@
-// #include "ListComputer.h"
 #include "Computer.h"
 #include "List.h"
 #include "Student.h"
+#include "DB.h"
+
 using namespace std;
+using namespace rapidjson;
 
 int main()
 {
-  Location location(2, 4);
-  Computer lenovo("1", false, location, "0", "102210116");
-  Computer lenovo2("1", false, location, "0", "2");
-  List<Computer> list;
   List<Student> listStudent;
-  bool kq = (lenovo2 == lenovo);
-  list.add(lenovo);
-  list.show();
-  cout << kq;
+  DB dbStudent("db_student.json");
+  Document d;
+  d.Parse(dbStudent.getDB());
+  const Value &db = d.GetArray();
+
+  for (int i = 0; i < db.Size(); i++)
+  {
+    listStudent.add(Student(db[i]["id"].GetString(), db[i]["name"].GetString(), db[i]["idComputer"].GetString()));
+  }
+  listStudent.show();
   return 0;
 }
