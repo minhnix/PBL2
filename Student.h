@@ -17,6 +17,8 @@ public:
   ~Student();
   string getId();
   string getName();
+  bool getIsUsingComputer();
+  string getIdComputer();
   bool operator==(const Student &);
   friend ostream &operator<<(ostream &, const Student &);
 };

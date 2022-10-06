@@ -27,25 +27,43 @@ Manage::~Manage()
 
 void Manage::Register()
 {
-  cout << "Danh sach cac may chua dc dang ky" << endl;
+  cout << "Danh sach cac may chua duoc dang ky" << endl;
   for (int i = 0; i < listComputer.length(); i++)
   {
     if (!listComputer.at(i).getBeingUsed())
       cout << listComputer.at(i).getId() << " " << listComputer.at(i).getName() << endl;
   }
-  string mssv, idComputer;
+  string mssv, name, idComputer;
   cout << "nhap mssv = ";
   cin >> mssv;
-  cout << "nhap may can dang ky = ";
-  cin >> idComputer;
+  int indexComputer, indexStudent = listStudent.indexOf(mssv);
+  cin.ignore(32767, '\n');
 
-  int indexComputer = listComputer.indexOf(idComputer);
-  if (listComputer.at(indexComputer).getBeingUsed())
-    cout << "may nay da dang ky, dang ky lai";
-  // fix
+  if (indexStudent == -1)
+  {
+    cout << "Ban chua dang ky. Vui long nhap ten cua ban de dang ky" << endl;
+    getline(cin, name);
+    indexStudent = dbStudent.getTotalCol(docStudent);
+    listStudent.add(Student(mssv, name, false, ""));
+    dbStudent.CreateStudent(mssv.c_str(), name.c_str(), docStudent);
+  }
+  if (listStudent.at(indexStudent).getIsUsingComputer())
+  {
+    cout << "Ban da dang ky may so " << listStudent.at(indexStudent).getIdComputer() << endl;
+    return;
+  }
+  while (1)
+  {
+    cout << "nhap may can dang ky = ";
+    cin >> idComputer;
+    indexComputer = listComputer.indexOf(idComputer);
+    if (listComputer.at(indexComputer).getBeingUsed())
+      cout << "may nay da dang ky. Vui long dang ky lai" << endl;
+    else
+      break;
+  }
+
   time_t now = time(0);
-
-  int indexStudent = listStudent.indexOf(mssv);
   listComputer.update(indexComputer, Computer(
                                          listComputer.at(indexComputer).getId(),
                                          listComputer.at(indexComputer).getName(),
@@ -66,13 +84,55 @@ void Manage::Register()
                     now,
                     docComputer);
   dbStudent.Update(indexStudent,
-                   listStudent.at(indexComputer).getName().c_str(),
+                   "-1",
                    true,
                    idComputer.c_str(),
                    docStudent);
-  cout << "ban da dang ky thanh cong";
+  cout << "ban da dang ky thanh cong" << endl;
 }
 
 void Manage::Unregister()
 {
+  string mssv;
+  cout << "nhap ma so sinh vien = ";
+  cin >> mssv;
+  int indexStudent = listStudent.indexOf(mssv);
+  if (indexStudent == -1)
+  {
+    cout << "Ma so sinh vien khong ton tai!" << endl;
+    return;
+  }
+  if (!listStudent.at(indexStudent).getIsUsingComputer())
+  {
+    cout << "Ban chua dang ky su dung may nao" << endl;
+    return;
+  }
+  int indexComputer = listComputer.indexOf(listStudent.at(indexStudent).getIdComputer());
+  time_t now = time(0);
+  long long time = now - listComputer.at(indexComputer).getRegisteredAt() + listComputer.at(indexComputer).getTimeUsed();
+  listComputer.update(indexComputer, Computer(
+                                         listComputer.at(indexComputer).getId(),
+                                         listComputer.at(indexComputer).getName(),
+                                         0,
+                                         false,
+                                         "",
+                                         time));
+  listStudent.update(indexStudent, Student(
+                                       mssv,
+                                       listStudent.at(indexStudent).getName(),
+                                       false,
+                                       ""));
+  dbComputer.Update(indexComputer,
+                    "-1",
+                    time,
+                    false,
+                    "",
+                    0,
+                    docComputer);
+  dbStudent.Update(indexStudent,
+                   "-1",
+                   false,
+                   "",
+                   docStudent);
+  cout << "Ban da huy thanh cong" << endl;
 }

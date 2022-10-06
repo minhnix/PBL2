@@ -32,6 +32,16 @@ string Student::getName()
   return name;
 }
 
+bool Student::getIsUsingComputer()
+{
+  return isUsingComputer;
+}
+
+string Student::getIdComputer()
+{
+  return idComputer;
+}
+
 ostream &operator<<(ostream &cout, const Student &student)
 {
   return cout << "id = " << student.id << "\nname = " << student.name << "\nComputer = " << student.isUsingComputer << endl;

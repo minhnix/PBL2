@@ -37,6 +37,18 @@ string Computer::getName()
 {
   return name;
 }
+string Computer::getIdStudent()
+{
+  return idStudent;
+}
+long long Computer::getTimeUsed()
+{
+  return timeUsed;
+}
+long long Computer::getRegisteredAt()
+{
+  return registeredAt;
+}
 bool Computer::operator==(const Computer &computer)
 {
   return (id == computer.id);

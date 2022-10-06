@@ -2,15 +2,15 @@
   {
     "id": "1",
     "name": "legion 5",
-    "timeUsed": 0,
-    "beingUsed": true,
-    "idStudent": "102210116",
-    "registeredAt": 1665051086
+    "timeUsed": 1509,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
   },
   {
     "id": "2",
     "name": "IdeaPad",
-    "timeUsed": 0,
+    "timeUsed": 1318,
     "beingUsed": false,
     "idStudent": "",
     "registeredAt": 0
@@ -27,17 +27,17 @@
     "id": "4",
     "name": "MSI",
     "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
+    "beingUsed": true,
+    "idStudent": "102210112",
+    "registeredAt": 1665066884
   },
   {
     "id": "5",
     "name": "HP",
     "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
+    "beingUsed": true,
+    "idStudent": "102210111",
+    "registeredAt": 1665066985
   },
   {
     "id": "6",
@@ -51,9 +51,9 @@
     "id": "7",
     "name": "Think Pad",
     "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
+    "beingUsed": true,
+    "idStudent": "007",
+    "registeredAt": 1665067057
   },
   {
     "id": "8",

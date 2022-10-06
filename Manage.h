@@ -8,7 +8,7 @@ using namespace rapidjson;
 
 class Manage
 {
-public:
+private:
   List<Computer> listComputer;
   List<Student> listStudent;
   Database dbStudent;

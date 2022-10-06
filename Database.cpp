@@ -34,7 +34,7 @@ void Database::CreateStudent(const char *id, const char *name, Document &db)
   string col = "/" + to_string(getTotalCol(db));
   Pointer((col + "/id").c_str()).Set(db, id);
   Pointer((col + "/name").c_str()).Set(db, name);
-  Pointer((col + "/isUsingComputer").c_str()).Set(db, "");
+  Pointer((col + "/isUsingComputer").c_str()).Set(db, false);
   Pointer((col + "/idComputer").c_str()).Set(db, "");
   writer(db);
 }
@@ -43,9 +43,10 @@ void Database::CreateComputer(const char *id, const char *name, Document &db)
   string col = "/" + to_string(getTotalCol(db));
   Pointer((col + "/id").c_str()).Set(db, id);
   Pointer((col + "/name").c_str()).Set(db, name);
-  Pointer((col + "/timeUsed").c_str()).Set(db, "");
-  Pointer((col + "/beingUsed").c_str()).Set(db, "");
+  Pointer((col + "/timeUsed").c_str()).Set(db, 0);
+  Pointer((col + "/beingUsed").c_str()).Set(db, false);
   Pointer((col + "/idStudent").c_str()).Set(db, "");
+  Pointer((col + "/registeredAt").c_str()).Set(db, 0);
   writer(db);
 }
 string Database::GetStringDB(int index, const char *field, Document &db)

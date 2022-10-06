@@ -21,6 +21,9 @@ public:
   bool getBeingUsed();
   string getId();
   string getName();
+  long long getTimeUsed();
+  string getIdStudent();
+  long long getRegisteredAt();
   bool operator==(const Computer &);
   friend ostream &operator<<(ostream &, const Computer &);
 };
