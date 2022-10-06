@@ -6,18 +6,30 @@ Student::Student()
 {
   this->id = "";
   this->name = "";
-  this->isUsingComputer = "";
+  this->isUsingComputer = false;
+  this->idComputer = "";
 }
 
-Student::Student(string id, string name, string idComputer)
+Student::Student(string id, string name, bool isUsing, string idComputer)
 {
   this->id = id;
   this->name = name;
-  this->isUsingComputer = idComputer;
+  this->isUsingComputer = isUsing;
+  this->idComputer = idComputer;
 }
 
 Student::~Student()
 {
+}
+
+string Student::getId()
+{
+  return id;
+}
+
+string Student::getName()
+{
+  return name;
 }
 
 ostream &operator<<(ostream &cout, const Student &student)

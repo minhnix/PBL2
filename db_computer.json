@@ -1,17 +1,122 @@
 [
-  { "id": "1", "name": "legion 5", "timeUsed": "0", "idStudent": "102210116" },
-  { "id": "2", "name": "IdeaPad", "timeUsed": "0", "idStudent": "" },
-  { "id": "3", "name": "Acer", "timeUsed": "0", "idStudent": "" },
-  { "id": "4", "name": "MSI", "timeUsed": "0", "idStudent": "" },
-  { "id": "5", "name": "HP", "timeUsed": "0", "idStudent": "" },
-  { "id": "6", "name": "Think Book", "timeUsed": "0", "idStudent": "" },
-  { "id": "7", "name": "Think Pad", "timeUsed": "0", "idStudent": "" },
-  { "id": "8", "name": "Macbook Air M1", "timeUsed": "0", "idStudent": "" },
-  { "id": "9", "name": "Razer", "timeUsed": "0", "idStudent": "" },
-  { "id": "10", "name": "Asus", "timeUsed": "0", "idStudent": "" },
-  { "id": "11", "name": "Dell", "timeUsed": "0", "idStudent": "" },
-  { "id": "12", "name": "BKAV", "timeUsed": "0", "idStudent": "" },
-  { "id": "13", "name": "Gaming Dell", "timeUsed": "0", "idStudent": "" },
-  { "id": "14", "name": "Macbook Pro", "timeUsed": "0", "idStudent": "" },
-  { "id": "15", "name": "Lenovo", "timeUsed": "0", "idStudent": "" }
+  {
+    "id": "1",
+    "name": "legion 5",
+    "timeUsed": 0,
+    "beingUsed": true,
+    "idStudent": "102210116",
+    "registeredAt": 1665051086
+  },
+  {
+    "id": "2",
+    "name": "IdeaPad",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "3",
+    "name": "Acer",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "4",
+    "name": "MSI",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "5",
+    "name": "HP",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "6",
+    "name": "Think Book",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "7",
+    "name": "Think Pad",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "8",
+    "name": "Macbook Air M1",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "9",
+    "name": "Razer",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "10",
+    "name": "Asus",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "11",
+    "name": "Dell",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "12",
+    "name": "BKAV",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "13",
+    "name": "Gaming Dell",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "14",
+    "name": "Macbook Pro",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  },
+  {
+    "id": "15",
+    "name": "Lenovo",
+    "timeUsed": 0,
+    "beingUsed": false,
+    "idStudent": "",
+    "registeredAt": 0
+  }
 ]

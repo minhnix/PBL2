@@ -7,21 +7,26 @@
 #include <string>
 #include <cstring>
 #include <iostream>
+#include <ctime>
 using namespace rapidjson;
 using namespace std;
 
 class Database
 {
 private:
+  const char *path;
+
 public:
   Database(const char *, Document &);
   ~Database();
   int getTotalCol(Document &);
-  void writer(const char *, Document &);
-  void Create(const char *__id, const char *__name, const char *__idComputer, const char *__path, Document &);
-  void Create(const char *__id, const char *__name, const char *__timeUsed, const char *__idStudent, const char *__path, Document &);
-  string Read(int __index, const char *__field, Document &);
-  void Update(int __index, const char *__name, const char *__idComputer, const char *__path, Document &);
-  void Update(int __index, const char *__name, const char *__timeUsed, const char *__idStudent, const char *__path, Document &);
-  void Delete(int __index, const char *__path, Document &);
+  void writer(Document &);
+  void CreateStudent(const char *id, const char *name, Document &);
+  void CreateComputer(const char *id, const char *name, Document &);
+  string GetStringDB(int index, const char *field, Document &);
+  bool GetBoolDB(int index, const char *field, Document &);
+  long long GetLLDB(int index, const char *field, Document &);
+  void Update(int index, const char *name, bool isUsingComputer, const char *idComputer, Document &);
+  void Update(int index, const char *name, long long timeUsed, bool beingUsed, const char *idStudent, long long registeredAt, Document &);
+  void Delete(int index, Document &);
 };
