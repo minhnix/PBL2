@@ -21,3 +21,86 @@ Manage::Manage()
 Manage::~Manage()
 {
 }
+void Manage::Create()
+{
+    string id, name;
+    cout << "Nhap thong tin may tinh moi\n";
+    cout << "ID may tinh: ";
+    getline(cin, id);
+    if (listComputer.indexOf(id) != -1)
+    {
+        cout << "ID may da ton tai\n";
+        return;
+    }
+    cout << "Ten may: ";
+    getline(cin, name);
+    Computer computer(id, name, 0);
+    listComputer.add(computer);
+    dbComputer.Create(computer);
+    cout << "Da tao thanh cong\n";
+}
+void Manage::Update()
+{
+    string id, name;
+    cout << "Nhap thong tin can sua\n";
+    cout << "ID may tinh can sua: ";
+    getline(cin, id);
+    int index = listComputer.indexOf(id);
+    if (index == -1)
+    {
+        cout << "May nay khong ton tai\n";
+        return;
+    }
+    cout << "Nhap ten moi: ";
+    getline(cin, name);
+    listComputer.at(index).setName(name);
+    dbComputer.Update(index, "name", name.c_str());
+    cout << "Da sua thanh cong\n";
+}
+void Manage::Delete()
+{
+    string id;
+    cout << "Nhap id may muon xoa: ";
+    getline(cin, id);
+    int index = listComputer.indexOf(id);
+    if (index == -1)
+    {
+        cout << "May nay khong ton tai\n";
+        return;
+    }
+    listComputer.removeAt(index);
+    dbComputer.Delete(index);
+    int i = 0;
+    while (i < listRegister.length())
+    {
+        if (listRegister.at(i).getIdComputer() == id)
+        {
+            listRegister.removeAt(i);
+            dbRegister.Delete(i);
+        }
+        else
+            i++;
+    }
+}
+void Manage::Register()
+{
+    cout << "Danh sach cac may tinh chua dang ky\n";
+    vector<string> listId;
+    for (int i = 0; i < listRegister.length(); i++)
+    {
+        if (listRegister.at(i).getUnRegisteredAt() == 0)
+            listId.push_back(listRegister.at(i).getIdComputer());
+    }
+    for (int i = 0; i < listComputer.length(); i++)
+    {
+        bool oke = true;
+        for (int j = 0; j < listId.size(); j++)
+            if (listComputer.at(i).getId() == listId[j])
+            {
+                oke = false;
+                break;
+            }
+        if (oke)
+            cout << listComputer.at(i);
+    }
+}

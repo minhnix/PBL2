@@ -1,27 +1,8 @@
 [
-  {
-    "id": "1",
-    "name": "Acer",
-    "timeUsed": 0
-  },
-  {
-    "id": "2",
-    "name": "HP",
-    "timeUsed": 0
-  },
-  {
-    "id": "3",
-    "name": "Dell",
-    "timeUsed": 0
-  },
-  {
-    "id": "4",
-    "name": "Legion 5",
-    "timeUsed": 0
-  },
-  {
-    "id": "5",
-    "name": "Slim 7",
-    "timeUsed": 0
-  }
+  { "id": "1", "name": "Acer", "timeUsed": 0 },
+  { "id": "2", "name": "HP", "timeUsed": 0 },
+  { "id": "3", "name": "Dell", "timeUsed": 0 },
+  { "id": "4", "name": "Legion 5", "timeUsed": 0 },
+  { "id": "5", "name": "Slim 7", "timeUsed": 0 },
+  { "id": "123123", "name": "test", "timeUsed": 0 }
 ]

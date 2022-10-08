@@ -57,5 +57,5 @@ bool Computer::operator==(const Computer &computer)
 }
 ostream &operator<<(ostream &cout, const Computer &computer)
 {
-  return cout << "id = " << computer.id << "\nname = " << computer.name << "\ntime used = " << computer.timeUsed << "\nstudent = " << endl;
+  return cout << "id = " << computer.id << "\nname = " << computer.name << "\ntime used = " << computer.timeUsed << endl;
 }

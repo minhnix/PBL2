@@ -1,30 +1,30 @@
 [
   {
     "id": "123",
-    "idComputer": "1",
-    "idStudent": "102210116",
+    "idComputer": "2",
+    "idStudent": "102210126",
     "registeredAt": 1231321,
-    "unRegisteredAt": 1
+    "unRegisteredAt": 0
   },
   {
     "id": "1",
     "idComputer": "1",
     "idStudent": "102210116",
     "registeredAt": 13203012,
-    "unRegisteredAt": 1
+    "unRegisteredAt": 12313213
+  },
+  {
+    "id": "1",
+    "idComputer": "1",
+    "idStudent": "102210116",
+    "registeredAt": 2313231,
+    "unRegisteredAt": 12312312
   },
   {
     "id": "1",
     "idComputer": "1",
     "idStudent": "102210116",
     "registeredAt": 13203012,
-    "unRegisteredAt": 1
-  },
-  {
-    "id": "1",
-    "idComputer": "1",
-    "idStudent": "102210116",
-    "registeredAt": 13203012,
-    "unRegisteredAt": 1
+    "unRegisteredAt": 0
   }
 ]
