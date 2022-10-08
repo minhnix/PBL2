@@ -18,7 +18,7 @@ public:
   int indexOf(string id);
   T at(int index);
   void removeAt(int index);
-  void remove(T &);
+  void remove(string id);
   void update(int, T);
   void show();
 };
@@ -68,12 +68,12 @@ void List<T>::removeAt(int index)
   list.erase(list.begin() + index);
 }
 template <class T>
-void List<T>::remove(T &t)
+void List<T>::remove(string id)
 {
-  int index = this->indexOf(t);
+  int index = indexOf(id);
   if (index == -1)
     return;
-  this->removeAt(index);
+  removeAt(index);
 }
 
 template <class T>

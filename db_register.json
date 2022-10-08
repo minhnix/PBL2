@@ -1,0 +1,30 @@
+[
+  {
+    "id": "123",
+    "idComputer": "1",
+    "idStudent": "102210116",
+    "registeredAt": 1231321,
+    "unRegisteredAt": 1
+  },
+  {
+    "id": "1",
+    "idComputer": "1",
+    "idStudent": "102210116",
+    "registeredAt": 13203012,
+    "unRegisteredAt": 1
+  },
+  {
+    "id": "1",
+    "idComputer": "1",
+    "idStudent": "102210116",
+    "registeredAt": 13203012,
+    "unRegisteredAt": 1
+  },
+  {
+    "id": "1",
+    "idComputer": "1",
+    "idStudent": "102210116",
+    "registeredAt": 13203012,
+    "unRegisteredAt": 1
+  }
+]

@@ -1,122 +1,27 @@
 [
   {
     "id": "1",
-    "name": "legion 5",
-    "timeUsed": 1509,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
+    "name": "Acer",
+    "timeUsed": 0
   },
   {
     "id": "2",
-    "name": "IdeaPad",
-    "timeUsed": 1318,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
+    "name": "HP",
+    "timeUsed": 0
   },
   {
     "id": "3",
-    "name": "Acer",
-    "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
+    "name": "Dell",
+    "timeUsed": 0
   },
   {
     "id": "4",
-    "name": "MSI",
-    "timeUsed": 0,
-    "beingUsed": true,
-    "idStudent": "102210112",
-    "registeredAt": 1665066884
+    "name": "Legion 5",
+    "timeUsed": 0
   },
   {
     "id": "5",
-    "name": "HP",
-    "timeUsed": 0,
-    "beingUsed": true,
-    "idStudent": "102210111",
-    "registeredAt": 1665066985
-  },
-  {
-    "id": "6",
-    "name": "Think Book",
-    "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
-  },
-  {
-    "id": "7",
-    "name": "Think Pad",
-    "timeUsed": 0,
-    "beingUsed": true,
-    "idStudent": "007",
-    "registeredAt": 1665067057
-  },
-  {
-    "id": "8",
-    "name": "Macbook Air M1",
-    "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
-  },
-  {
-    "id": "9",
-    "name": "Razer",
-    "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
-  },
-  {
-    "id": "10",
-    "name": "Asus",
-    "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
-  },
-  {
-    "id": "11",
-    "name": "Dell",
-    "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
-  },
-  {
-    "id": "12",
-    "name": "BKAV",
-    "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
-  },
-  {
-    "id": "13",
-    "name": "Gaming Dell",
-    "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
-  },
-  {
-    "id": "14",
-    "name": "Macbook Pro",
-    "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
-  },
-  {
-    "id": "15",
-    "name": "Lenovo",
-    "timeUsed": 0,
-    "beingUsed": false,
-    "idStudent": "",
-    "registeredAt": 0
+    "name": "Slim 7",
+    "timeUsed": 0
   }
 ]

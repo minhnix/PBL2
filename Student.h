@@ -1,24 +1,23 @@
 #include <iostream>
 #include <string>
-
+#include <map>
 using namespace std;
 
 class Student
 {
-protected:
+private:
   string id;
   string name;
-  bool isUsingComputer;
-  string idComputer;
 
 public:
   Student(/* args */);
-  Student(string id, string name, bool isUsingComputer, string idComputer);
+  Student(string id, string name);
   ~Student();
+  map<string, string> getAll();
   string getId();
   string getName();
-  bool getIsUsingComputer();
-  string getIdComputer();
+  void setId(string id);
+  void setName(string name);
   bool operator==(const Student &);
   friend ostream &operator<<(ostream &, const Student &);
 };

@@ -6,43 +6,41 @@ Student::Student()
 {
   this->id = "";
   this->name = "";
-  this->isUsingComputer = false;
-  this->idComputer = "";
 }
 
-Student::Student(string id, string name, bool isUsing, string idComputer)
+Student::Student(string id, string name)
 {
   this->id = id;
   this->name = name;
-  this->isUsingComputer = isUsing;
-  this->idComputer = idComputer;
 }
 
 Student::~Student()
 {
 }
-
+map<string, string> Student::getAll()
+{
+  map<string, string> data;
+  data["id"] = id;
+  data["name"] = name;
+  return data;
+}
 string Student::getId()
 {
   return id;
 }
-
 string Student::getName()
 {
   return name;
 }
-
-bool Student::getIsUsingComputer()
+void Student::setId(string id)
 {
-  return isUsingComputer;
-}
-
-string Student::getIdComputer()
+  this->id = id;
+};
+void Student::setName(string name)
 {
-  return idComputer;
+  this->name = name;
 }
-
 ostream &operator<<(ostream &cout, const Student &student)
 {
-  return cout << "id = " << student.id << "\nname = " << student.name << "\nComputer = " << student.isUsingComputer << endl;
+  return cout << "id = " << student.id << "\nname = " << student.name << endl;
 }

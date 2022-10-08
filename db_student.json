@@ -1,32 +1,7 @@
 [
-  {
-    "id": "102210116",
-    "name": "Minh",
-    "isUsingComputer": false,
-    "idComputer": ""
-  },
-  {
-    "id": "102210140",
-    "name": "Vinh",
-    "isUsingComputer": false,
-    "idComputer": ""
-  },
-  {
-    "id": "102210111",
-    "name": "Teo",
-    "isUsingComputer": true,
-    "idComputer": "5"
-  },
-  {
-    "id": "102210112",
-    "name": "Lan",
-    "isUsingComputer": true,
-    "idComputer": "4"
-  },
-  {
-    "id": "007",
-    "name": "Diep vien",
-    "isUsingComputer": true,
-    "idComputer": "7"
-  }
+  { "id": "102210116", "name": "Minh" },
+  { "id": "102210116", "name": "Minh" },
+  { "id": "102210116", "name": "Minh" },
+  { "id": "102210116", "name": "Minh" },
+  { "id": "102210116", "name": "Minh" }
 ]

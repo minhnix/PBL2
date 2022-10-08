@@ -1,6 +1,7 @@
 #include "Computer.h"
-#include "List.h"
 #include "Student.h"
+#include "Record.h"
+#include "List.h"
 #include "Database.h"
 
 using namespace std;
@@ -8,11 +9,13 @@ using namespace rapidjson;
 
 class Manage
 {
-private:
-  List<Computer> listComputer;
+public:
   List<Student> listStudent;
-  Database dbStudent;
-  Database dbComputer;
+  List<Computer> listComputer;
+  List<Record> listRegister;
+  Database<Student> dbStudent;
+  Database<Computer> dbComputer;
+  Database<Record> dbRegister;
 
 public:
   Manage();
