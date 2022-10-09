@@ -9,7 +9,8 @@ int main()
   // ql.listRegister.show();
   // ql.Create();
   // ql.Update();
-  // ql.Delete();
+  // ql.Delete(g);
   ql.Register();
+  ql.Unregister();
   return 0;
 }

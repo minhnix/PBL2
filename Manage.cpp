@@ -103,4 +103,78 @@ void Manage::Register()
         if (oke)
             cout << listComputer.at(i);
     }
+    string idComputer, idStudent;
+    cout << "Nhap mssv: ";
+    getline(cin, idStudent);
+    int indexStudent = listStudent.indexOf(idStudent);
+    if (indexStudent == -1)
+    {
+        cout << "Ban chua dang ky. Vui long nhap ten de dang ky: ";
+        string name;
+        getline(cin, name);
+        listStudent.add(Student(idStudent, name));
+        dbStudent.Create(listStudent.at(listStudent.length() - 1));
+        cout << "Ban da dang ky mssv thanh cong\n";
+    }
+    for (int i = 0; i < listRegister.length(); i++)
+    {
+        if (idStudent == listRegister.at(i).getIdStudent() && listRegister.at(i).getUnRegisteredAt() == 0)
+        {
+            cout << "Ban da dang ky may so " << listRegister.at(i).getIdComputer() << endl;
+            return;
+        }
+    }
+    bool oke = true;
+    while (oke)
+    {
+        oke = false;
+        cout << "Nhap id may tinh can dang ky: ";
+        getline(cin, idComputer);
+        for (int i = 0; i < listId.size(); i++)
+        {
+            if (idComputer == listId[i])
+            {
+                cout << "May nay da dang ky\n";
+                oke = true;
+                break;
+            }
+        }
+    }
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    string id = idStudent + idComputer + to_string(now);
+    listRegister.add(Record(id, idComputer, idStudent, now, 0));
+    dbRegister.Create(listRegister.at(listRegister.length() - 1));
+    cout << "Ban da dang ky thanh cong vao luc " << ltm->tm_hour << ":" << ltm->tm_min << ":" << ltm->tm_sec << endl;
+}
+void Manage::Unregister()
+{
+    cout << "Nhap mssv cua ban: ";
+    string idStudent, idComputer;
+    int indexRegister;
+    getline(cin, idStudent);
+    bool oke = true;
+    for (int i = 0; i < listRegister.length(); i++)
+    {
+        if (idStudent == listRegister.at(i).getIdStudent() && listRegister.at(i).getUnRegisteredAt() == 0)
+        {
+            oke = false;
+            indexRegister = i;
+            idComputer = listRegister.at(i).getIdComputer();
+            break;
+        }
+    }
+    if (oke)
+    {
+        cout << "Ban chua dang ky may nao\n";
+        return;
+    }
+    time_t now = time(0);
+    int indexComputer = listComputer.indexOf(idComputer);
+    long long timeUsed = listComputer.at(indexComputer).getTimeUsed() + (now - listRegister.at(indexRegister).getRegisteredAt());
+    listComputer.at(indexComputer).setTimeUsed(timeUsed);    // update timeUsed Computer
+    listRegister.at(indexRegister).setUnRegisterAt(now);     // update unRegistered time
+    dbComputer.Update(indexComputer, "timeUsed", timeUsed);  // save database
+    dbRegister.Update(indexRegister, "unRegisteredAt", now); // save database
+    cout << "Ban da huy dang ky thanh cong\n";
 }
